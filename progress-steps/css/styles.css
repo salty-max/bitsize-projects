@@ -1,0 +1,109 @@
+:root {
+  --fill-color: #a29bfeff;
+  --empty-color: #dfe6e9;
+  --white-color: #fff;
+  --grey-color: #2d3436;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f7fb;
+  font-family: "Nunito";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  width: 350px;
+}
+
+.progress-container::before {
+  content: '';
+  background-color: var(--empty-color);
+  width: 100%;
+  height: .25rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.progress {
+  background-color: var(--fill-color);
+  width: 0%;
+  height: .25rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: .4s ease-in;
+}
+
+.circle {
+  background-color: var(--white-color);
+  color: var(--grey-color);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  border: .25rem solid var(--empty-color);
+  transition: border-color .4s ease-in;
+}
+
+.circle.active {
+  border-color: var(--fill-color);
+}
+
+.buttons {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: var(--fill-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: .375rem;
+  cursor: pointer;
+  font-family: inherit;
+  padding: .5rem 1rem;
+  margin: .5rem;
+  font-size: .875rem;
+}
+
+.button:disabled {
+  background-color: var(--empty-color);
+  cursor: not-allowed;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.button:focus {
+  outline: 0;
+}
+

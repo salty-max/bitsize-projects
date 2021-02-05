@@ -1,12 +1,17 @@
 :root {
   --success: #55efc4;
+  --success-dark: #00b894;
   --danger: #ff7675;
-  --warning: #fdcb6e;
+  --danger-dark: #d63031;
+  --warning: #ffeaa7;
+  --warning-dark: #fdcb6e;
   --dark: #2d3436;
   --light: #dfe6e9;
   --white: #ffffff;
   --primary: #74b9ff;
-  --secondary: #a29bfe
+  --primary-dark: #0984e3;
+  --secondary: #a29bfe;
+  --secondary-dark: #6c5ce7;
 }
 
 * {
@@ -14,7 +19,7 @@
 }
 
 body {
-  font-family: "Nunito";
+  font-family: 'Nunito';
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,4 +29,3 @@ body {
   margin: 0;
   color: var(--dark);
 }
-

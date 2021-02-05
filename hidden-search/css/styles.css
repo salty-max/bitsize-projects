@@ -50,7 +50,7 @@ body {
   padding: 1rem;
   height: var(--size);
   width: var(--size);
-  transition: width 0.3s ease;
+  transition: width 0.5s ease;
   border-radius: var(--radius);
 }
 
@@ -64,7 +64,7 @@ body {
   left: 0;
   width: var(--size);
   height: var(--size);
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   border-radius: var(--radius);
 }
 
@@ -84,4 +84,9 @@ body {
 .search.active .button {
   transform: translateX(188px);
   color: var(--secondary-dark);
+}
+
+.search.active .button i {
+  transform: rotateY(180deg);
+  transition: transform 0.5s ease;
 }
